@@ -32,7 +32,11 @@ namespace TriangleApp
                 if (TriangleUtils.IsTriangle(sides))
                     Console.WriteLine($"There exists a triangle with sides: {sides[0]} {sides[1]} {sides[2]}.");
                 else
+                {
                     Console.WriteLine($"There is no triangle with sides: {sides[0]} {sides[1]} {sides[2]}.");
+                    Console.ReadKey();
+                    return;
+                }
                 if (TriangleUtils.IsEquilateral(sides))
                     Console.WriteLine("Triangle is equilateral.");
                 else if (TriangleUtils.IsRightAngled(sides))
