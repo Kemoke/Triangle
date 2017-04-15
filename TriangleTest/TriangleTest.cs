@@ -134,7 +134,7 @@ namespace TriangleTest
         [Fact]
         public void TestIsBluntAngledTrue()
         {
-            var sides = new double[] { 6, 3, 15 };
+            var sides = new double[] { 10, 10, 19 };
             Assert.True(TriangleUtils.IsBluntAngled(sides));
         }
 
@@ -164,21 +164,29 @@ namespace TriangleTest
         public void TestIsSharpAngledTrue()
         {
             var sides = new double[] { 4, 4, 3 };
-            Assert.True(false, "Not implemented");
+            Assert.True(TriangleUtils.IsSharpAngled(sides));
         }
 
         [Fact]
         public void TestIsSharpAngledFalse()
         {
-            var sides = new double[] { 6, 3, 8 };
-            Assert.True(false, "Not implemented");
+            var sides = new double[] { 10, 10, 19 };
+            Assert.False(TriangleUtils.IsSharpAngled(sides));
         }
 
         [Fact]
         public void TestIsSharpAngledBadInput()
         {
             var sides = new double[] { -1, 2 };
-            Assert.True(false, "Not implemented");
+            try
+            {
+                TriangleUtils.IsSharpAngled(sides);
+                Assert.True(false, "Exception not thrown");
+            }
+            catch (ArgumentException)
+            {
+                //Test pass
+            }
         }
     }
 }
