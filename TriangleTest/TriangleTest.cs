@@ -35,6 +35,44 @@ namespace TriangleTest
             }
         }
 
+
+        [Fact]
+        public void TestEqualSideCount1()
+        {
+            var sides = new double[] { 4, 2, 3 };
+            Assert.Equal(0, TriangleUtils.EqualSideCount(sides));
+        }
+
+        [Fact]
+        public void TestEqualSideCount2()
+        {
+            var sides = new double[] { 4, 4, 3 };
+            Assert.Equal(1, TriangleUtils.EqualSideCount(sides));
+        }
+
+        [Fact]
+        public void TestEqualSideCount3()
+        {
+            var sides = new double[] { 4, 4, 4 };
+            Assert.Equal(3, TriangleUtils.EqualSideCount(sides));
+        }
+
+        [Fact]
+        public void TestEqualSideCountBadInput()
+        {
+            var sides = new double[] { -1, 2 };
+            try
+            {
+                TriangleUtils.EqualSideCount(sides);
+                Assert.True(false, "Exception not thrown");
+            }
+            catch (ArgumentException)
+            {
+                //Test pass
+            }
+        }
+
+
         [Fact]
         public void TestIsEquilateralTrue()
         {
@@ -118,34 +156,5 @@ namespace TriangleTest
             var sides = new double[] { -1, 2 };
             Assert.True(false, "Not implemented");
         }
-
-        [Fact]
-        public void TestEqualSideCount1()
-        {
-            var sides = new double[] { 4, 2, 3 };
-            Assert.True(false, "Not implemented");
-        }
-
-        [Fact]
-        public void TestEqualSideCount2()
-        {
-            var sides = new double[] { 4, 4, 3 };
-            Assert.True(false, "Not implemented");
-        }
-
-        [Fact]
-        public void TestEqualSideCount3()
-        {
-            var sides = new double[] { 4, 4, 3 };
-            Assert.True(false, "Not implemented");
-        }
-
-        [Fact]
-        public void TestEqualSideCountBadInput()
-        {
-            var sides = new double[] { -1, 2 };
-            Assert.True(false, "Not implemented");
-        }
-
     }
 }
