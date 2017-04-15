@@ -41,7 +41,10 @@ namespace Triangle
 
         public static bool IsRightAngled(double[] sides)
         {
-            return false;
+            CheckInput(sides);
+            Array.Sort(sides);
+            var hypothenuse = Math.Sqrt(sides[0] * sides[0] + sides[1] * sides[1]);
+            return Math.Abs(hypothenuse - sides[2]) < 0.0001;
         }
     }
 }
