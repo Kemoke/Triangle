@@ -46,5 +46,10 @@ namespace Triangle
             var hypothenuse = Math.Sqrt(sides[0] * sides[0] + sides[1] * sides[1]);
             return Math.Abs(hypothenuse - sides[2]) < 0.0001;
         }
+
+        public static bool IsBluntAngled(double[] sides)
+        {
+            return false;
+        }
     }
 }
