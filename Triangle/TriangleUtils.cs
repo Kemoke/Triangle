@@ -33,5 +33,10 @@ namespace Triangle
                 counter++;
             return counter;
         }
+
+        public static bool IsEquilateral(double[] sides)
+        {
+            return EqualSideCount(sides) == 3;
+        }
     }
 }

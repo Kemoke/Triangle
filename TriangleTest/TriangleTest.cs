@@ -77,21 +77,29 @@ namespace TriangleTest
         public void TestIsEquilateralTrue()
         {
             var sides = new double[] { 3, 3, 3 };
-            Assert.True(false, "Not implemented");
+            Assert.True(TriangleUtils.IsEquilateral(sides));
         }
 
         [Fact]
         public void TestIsEquilateralFalse()
         {
             var sides = new double[] { 2, 2, 3 };
-            Assert.True(false, "Not implemented");
+            Assert.False(TriangleUtils.IsEquilateral(sides));
         }
 
         [Fact]
         public void TestIsEquilateralBadInput()
         {
             var sides = new double[] { -1, 4 };
-            Assert.True(false, "Not implemented");
+            try
+            {
+                TriangleUtils.IsEquilateral(sides);
+                Assert.True(false, "Exception not thrown");
+            }
+            catch (ArgumentException)
+            {
+                //Test pass
+            }
         }
 
         [Fact]
