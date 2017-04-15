@@ -25,11 +25,11 @@ namespace Triangle
         {
             CheckInput(sides);
             var counter = 0;
-            if (Math.Abs(sides[0] - sides[1]) > 0.0001)
+            if (Math.Abs(sides[0] - sides[1]) < 0.0001)
                 counter++;
-            if (Math.Abs(sides[1] - sides[2]) > 0.0001)
+            if (Math.Abs(sides[1] - sides[2]) < 0.0001)
                 counter++;
-            if (Math.Abs(sides[0] - sides[2]) > 0.0001)
+            if (Math.Abs(sides[0] - sides[2]) < 0.0001)
                 counter++;
             return counter;
         }
