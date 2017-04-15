@@ -56,7 +56,9 @@ namespace Triangle
 
         public static bool IsSharpAngled(double[] sides)
         {
-            return false;
+            CheckInput(sides);
+            if (IsRightAngled(sides)) return false;
+            return Math.Sqrt(Math.Pow(sides[0], 2) + Math.Pow(sides[1], 2)) > sides[2];
         }
     }
 }
