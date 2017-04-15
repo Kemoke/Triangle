@@ -106,21 +106,29 @@ namespace TriangleTest
         public void TestIsRightAngledTrue()
         {
             var sides = new double[] { 3, 4, 5 };
-            Assert.True(false, "Not implemented");
+            Assert.True(TriangleUtils.IsRightAngled(sides));
         }
 
         [Fact]
         public void TestIsRightAngledFalse()
         {
             var sides = new double[] { 3, 4, 6 };
-            Assert.True(false, "Not implemented");
+            Assert.False(TriangleUtils.IsRightAngled(sides));
         }
 
         [Fact]
         public void TestIsRightAngledBadInput()
         {
             var sides = new double[] { -1, 2 };
-            Assert.True(false, "Not implemented");
+            try
+            {
+                TriangleUtils.IsRightAngled(sides);
+                Assert.True(false, "Exception not thrown");
+            }
+            catch (ArgumentException)
+            {
+                //Test pass
+            }
         }
 
         [Fact]

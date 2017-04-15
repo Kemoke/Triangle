@@ -38,5 +38,10 @@ namespace Triangle
         {
             return EqualSideCount(sides) == 3;
         }
+
+        public static bool IsRightAngled(double[] sides)
+        {
+            return false;
+        }
     }
 }
