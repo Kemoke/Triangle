@@ -10,14 +10,14 @@ namespace TriangleTest
         public void TestIsTriangleTrue()
         {
             var sides = new double[] { 3, 4, 5 };
-            Assert.True(TriangleUtils.isTriangle(sides));
+            Assert.True(TriangleUtils.IsTriangle(sides));
         }
 
         [Fact]
         public void TestIsTriangleFalse()
         {
             var sides = new double[] { 1, 2, 5 };
-            Assert.False(TriangleUtils.isTriangle(sides));
+            Assert.False(TriangleUtils.IsTriangle(sides));
         }
 
         [Fact]
@@ -26,7 +26,7 @@ namespace TriangleTest
             var sides = new double[] { -1, 4 };
             try
             {
-                TriangleUtils.isTriangle(sides);
+                TriangleUtils.IsTriangle(sides);
                 Assert.True(false, "Exception not thrown");
             }
             catch (ArgumentException)
