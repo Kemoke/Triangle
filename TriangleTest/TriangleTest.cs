@@ -10,133 +10,141 @@ namespace TriangleTest
         public void TestIsTriangleTrue()
         {
             var sides = new double[] { 3, 4, 5 };
-            Assert.True(false);
+            Assert.True(TriangleUtils.isTriangle(sides));
         }
 
         [Fact]
         public void TestIsTriangleFalse()
         {
             var sides = new double[] { 1, 2, 5 };
-            Assert.True(false);
+            Assert.False(TriangleUtils.isTriangle(sides));
         }
 
         [Fact]
         public void TestIsTriangleBadInput()
         {
             var sides = new double[] { -1, 4 };
-            Assert.True(false);
+            try
+            {
+                TriangleUtils.isTriangle(sides);
+                Assert.True(false, "Exception not thrown");
+            }
+            catch (ArgumentException)
+            {
+                //Test pass
+            }
         }
 
         [Fact]
         public void TestIsEquilateralTrue()
         {
             var sides = new double[] { 3, 3, 3 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestIsEquilateralFalse()
         {
             var sides = new double[] { 2, 2, 3 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestIsEquilateralBadInput()
         {
             var sides = new double[] { -1, 4 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestIsRightAngledTrue()
         {
             var sides = new double[] { 3, 4, 5 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestIsRightAngledFalse()
         {
             var sides = new double[] { 3, 4, 6 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestIsRightAngledBadInput()
         {
             var sides = new double[] { -1, 2 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestIsBluntAngledTrue()
         {
             var sides = new double[] { 6, 3, 8 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestIsBluntAngledFalse()
         {
             var sides = new double[] { 4, 4, 3 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestIsBluntAngledBadInput()
         {
             var sides = new double[] { -1, 2 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestIsSharpAngledTrue()
         {
             var sides = new double[] { 4, 4, 3 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestIsSharpAngledFalse()
         {
             var sides = new double[] { 6, 3, 8 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestIsSharpAngledBadInput()
         {
             var sides = new double[] { -1, 2 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestEqualSideCount1()
         {
             var sides = new double[] { 4, 2, 3 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestEqualSideCount2()
         {
             var sides = new double[] { 4, 4, 3 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestEqualSideCount3()
         {
             var sides = new double[] { 4, 4, 3 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
         [Fact]
         public void TestEqualSideCountBadInput()
         {
             var sides = new double[] { -1, 2 };
-            Assert.True(false);
+            Assert.True(false, "Not implemented");
         }
 
     }
