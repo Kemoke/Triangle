@@ -47,7 +47,7 @@ namespace TriangleTest
         public void TestEqualSideCount2()
         {
             var sides = new double[] { 4, 4, 3 };
-            Assert.Equal(1, TriangleUtils.EqualSideCount(sides));
+            Assert.Equal(2, TriangleUtils.EqualSideCount(sides));
         }
 
         [Fact]

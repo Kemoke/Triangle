@@ -31,6 +31,8 @@ namespace Triangle
                 counter++;
             if (Math.Abs(sides[0] - sides[2]) < 0.0001)
                 counter++;
+            if (counter == 1)
+                counter++;
             return counter;
         }
 
