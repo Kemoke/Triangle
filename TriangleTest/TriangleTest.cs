@@ -134,7 +134,7 @@ namespace TriangleTest
         [Fact]
         public void TestIsBluntAngledTrue()
         {
-            var sides = new double[] { 6, 3, 8 };
+            var sides = new double[] { 6, 3, 15 };
             Assert.True(TriangleUtils.IsBluntAngled(sides));
         }
 

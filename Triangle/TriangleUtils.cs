@@ -43,13 +43,15 @@ namespace Triangle
         {
             CheckInput(sides);
             Array.Sort(sides);
-            var hypothenuse = Math.Sqrt(sides[0] * sides[0] + sides[1] * sides[1]);
+            var hypothenuse = Math.Sqrt(Math.Pow(sides[0],2) + Math.Pow(sides[1], 2));
             return Math.Abs(hypothenuse - sides[2]) < 0.0001;
         }
 
         public static bool IsBluntAngled(double[] sides)
         {
-            return false;
+            CheckInput(sides);
+            if (IsRightAngled(sides)) return false;
+            return Math.Sqrt(Math.Pow(sides[0], 2) + Math.Pow(sides[1], 2)) < sides[2];
         }
     }
 }
